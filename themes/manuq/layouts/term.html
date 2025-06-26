@@ -1,0 +1,10 @@
+{{ define "main" }}
+  <h1>{{ i18n "tag" }}: {{ lower .Title }}</h1>
+  {{ .Content }}
+  {{ range .Pages }}
+    <div class="lista-de-paginas">
+    <h2><a class="head-link-secondary" href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
+    {{ .Summary }}
+    </div>
+  {{ end }}
+{{ end }}

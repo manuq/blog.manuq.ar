@@ -1,0 +1,9 @@
+{{ define "main" }}
+  {{ .Content }}
+  {{ range site.RegularPages }}
+    <div class="lista-de-paginas">
+    <h2><a class="head-link-secondary" href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
+    {{ .Summary }}
+    </div>
+  {{ end }}
+{{ end }}

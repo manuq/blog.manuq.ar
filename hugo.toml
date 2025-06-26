@@ -1,0 +1,17 @@
+baseURL = 'https://blog.manuq.ar'
+theme = 'manuq'
+defaultContentLanguage = 'es'
+
+[languages]
+  [languages.es]
+    title = "el blog de manuq"
+    languageCode = 'es-AR'
+    languageName = 'Español'
+  [languages.en]
+    title = "manuq's blog"
+    languageCode = 'en-US'
+    languageName = 'English'
+
+[caches]
+  [caches.images]
+    dir = ':cacheDir/images'

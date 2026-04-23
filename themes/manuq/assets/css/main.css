@@ -126,6 +126,10 @@ code {
     flex: 1 0 auto;
 }
 
+.contenido img {
+  max-width: 100%;
+}
+
 .pie-del-contenido {
     flex-shrink: 0;
     color: var(--secondary);

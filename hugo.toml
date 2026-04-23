@@ -15,3 +15,8 @@ defaultContentLanguage = 'es'
 [caches]
   [caches.images]
     dir = ':cacheDir/images'
+
+[markup.goldmark.renderer]
+  # Sólo para poner un <a href="mailto:">
+  # Buscar alternativa.
+  unsafe= true

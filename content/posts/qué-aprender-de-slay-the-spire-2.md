@@ -8,7 +8,7 @@ summary = 'el proyecto más popular de godot, decompilado'
 
 Slay the Spire 2 me convoca por dos cosas:
 
-Uno, me gustan los juegos de cartas. Vengo de Marvel Snap y Balatro en videojuegos. Y como juego de mesa, en las juntadas con amigos nunca falla el viejo y querido truco (¡del que ya postearé!).
+Uno, me gustan los juegos de cartas. Vengo de Marvel Snap y Balatro en videojuegos. Y como juego de mesa, en las juntadas con amigos nunca falla [el viejo y querido truco]({{< relref "posts/sobre-videojuego-y-truco.md" >}}).
 
 Y dos, me entusiasma que esté hecho en Godot, que es el engine que vengo usando en el laburo. Hay bastante escrito en internet de cómo transicionaron desde Unity. Valga el chiste: "Muerte a los salvages unityarios!" exclaman desde la federación de Godot.
 

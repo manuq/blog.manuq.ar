@@ -1,5 +1,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width">
 <title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ printf "%s | %s" .Title site.Title }}{{ end }}</title>
+{{ with .OutputFormats.Get "rss" -}}
+  <link rel="{{ .Rel }}" type="{{ .MediaType.Type }}" href="{{ .Permalink | safeURL }}" title="{{ site.Title }}">
+{{ else -}}
+  {{ with site.Home.OutputFormats.Get "rss" -}}
+    <link rel="{{ .Rel }}" type="{{ .MediaType.Type }}" href="{{ .Permalink | safeURL }}" title="{{ site.Title }}">
+  {{ end -}}
+{{ end -}}
 {{ partialCached "head/css.html" . }}
 {{ partialCached "head/js.html" . }}

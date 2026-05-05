@@ -1,3 +1,5 @@
 published = 'publicado'
 tag = 'etiqueta'
 tags = 'etiquetas'
+recent_content_on = 'contenido reciente en'
+recent_posts = 'posteos recientes'

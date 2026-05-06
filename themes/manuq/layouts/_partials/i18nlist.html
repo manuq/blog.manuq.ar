@@ -2,7 +2,7 @@
 <ul class="menu-list lang-switch">
   {{ range .Translations }}
   <li>
-    <a href="{{ .RelPermalink }}">{{ lower .Language.LanguageName }}</a>
+    <a href="{{ .RelPermalink }}">{{ lower .Language.Label }}</a>
   </li>
   {{ end }}
 </ul>

@@ -5,12 +5,12 @@ defaultContentLanguage = 'es'
 [languages]
   [languages.es]
     title = "el blog de manuq"
-    languageCode = 'es-AR'
-    languageName = 'Español'
+    locale = 'es-AR'
+    label = 'Español'
   [languages.en]
     title = "manuq's blog"
-    languageCode = 'en-US'
-    languageName = 'English'
+    locale = 'en-US'
+    label = 'English'
 
 [caches]
   [caches.images]

@@ -61,6 +61,11 @@ a {
 
 a.head-link {
     color: var(--primary);
+    text-decoration: none;
+}
+
+.contenido :is(h1, h2, h3, h4, h5, h6):is(:hover, :target) a.head-link::after {
+    content: " #";
 }
 
 a.head-link-secondary {

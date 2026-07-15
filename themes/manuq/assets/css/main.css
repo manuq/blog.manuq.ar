@@ -6,6 +6,8 @@
     --bg-color: #fff;
     --bg-pre: #eee;
     --link-color: #93e;
+    --selection-background-color: #b5f;
+    --selection-color: #fff;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -15,7 +17,14 @@
         --bg-color: #222;
         --bg-pre: #333;
         --link-color: #b5f;
+        --selection-background-color: #93e;
+        --selection-color: #000;
     }
+}
+
+::selection {
+  background-color: var(--selection-background-color);
+  color: var(--selection-color);
 }
 
 @font-face {

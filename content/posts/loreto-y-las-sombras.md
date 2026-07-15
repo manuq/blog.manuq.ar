@@ -11,7 +11,7 @@ summary = 'entrada grupal para la jam Mujeres de la Independencia'
 
 Me enteré de [esta jam](https://itch.io/jam/mujeres-de-la-independencia-gamejam) y me atrajo. Primero y principal por la temática: visibilizar a las mujeres que tuvieron relevancia en los hechos históricos de nuestra independencia, las que los libros y la "historia oficial" dejaron de lado. Y después por la duración. Iba apropiadamente del 20 de junio al 9 de julio. Entre el laburo y la vida no me queda mucho tiempo extra, y tampoco me gusta pasarme los findes sentado en la compu (ya bastante me paso durante la semana). Pero tres semanas es un tiempo re manejable. Además coincidía con el evento mundial-futbolístico y daba para aprovechar la distracción generalizada y enfocarme en un juego.
 
-Me interesaba en particular hacer algo sobre la figura de Macacha Güemes. Para el feriado anterior del 17 de junio, estuvimos en casa hablando de Macacha. Así que [tiré ideas](https://excalidraw.com/#json=vaQaoLIEsWSMUBTOFOPw4,aex0TXm9y6auFkm4vJ_bTw), aunque el scope se me iba a la mierda y me daba cuiqui errarle fiero a la historia.. estaba a punto de desistir.. cuando leo en el discord de la organización:
+Me interesaba en particular hacer algo sobre la figura de Macacha Güemes. Para el feriado anterior del 17 de junio, estuvimos en casa hablando de Macacha. Así que [tiré ideas](https://excalidraw.com/#json=vaQaoLIEsWSMUBTOFOPw4,aex0TXm9y6auFkm4vJ_bTw), aunque el scope se me iba a la mierda y me daba cuiqui errarle fiero a la historia.. estaba a punto de desistir.. cuando leo en el discord del eventon:
 
 > Cecilia Verino — Holi. Ando dispo para hacer un proyecto para una jam. Soy historiadora, game designer y diseñadora de narrativa, por lo que necesitaría gente en programación, arte y audio. Si es un programador de Godot, mejor, porque estoy aprendiendo a prototipar en ese motor y me gustaría practicar con el mismo. Andaba con ganas de hacer un juego estilo sigilo y acción con Macacha Güemes y las espías salteñas. Si alguien está interesado en la idea, avisen porfa.
 
@@ -21,7 +21,7 @@ Me interesaba en particular hacer algo sobre la figura de Macacha Güemes. Para 
 
 Hicimos reuniones virtuales. Armamos [un figma](https://www.figma.com/board/EtVtFaOGvAbACt525vlP8J/Juego-Macacha?node-id=0-1&t=i1vLnE94TM1vOLSi-1) (acá [en png](https://drive.google.com/file/d/132h7BggRbmW2Fs10BBo0Q2uSu-5StWeG/view?usp=sharing)). Me empecé a cebar. También cayó a mis manos (¡gracias Josefina!) un librito de divulgación cuyo título envejeció un poco mal: *Libertarias, mujeres que dejan huella. De Mariana Baizán*, que escaneé y [dejo acá para descargar](https://drive.google.com/file/d/1Uxg75PCW4csa5IoDrUyJe3g0gD4BTH-C/view?usp=sharing).
 
-De la previa me gustó que decidamos una estética tipo "Cult of the Lamb", un 2.5D digamos. Y que hayan minijuegos bien simples para cortar un poco la narrativa. También que la protagonista no sea Macacha sino otra de "las bomberas": María Loreto Sánchez Peón, la líder de las espías salteñas.
+De la previa me gustó que decidamos una estética tipo "Cult of the Lamb", un 2.5D digamos. Y la idea de agregar minijuegos bien simples para cortar un poco la narrativa. También que la protagonista no sea Macacha sino otra de "las bomberas": María Loreto Sánchez Peón, la líder de las espías salteñas.
 
 Me veía fuera de mi zona de confort ya que acostumbro a usar godot en 2d, y este proyecto se encaminaba a ser 3d con sprites como billboards. ¡Interesante!
 
@@ -43,9 +43,9 @@ Por mi parte, inicié [el repo en github](https://github.com/MacachaJam/macacha-
 ...hasta sacarle por completo la integración continua que trae y ponerle una propia. Ya casi erradicando la plantilla del repo. Lección para la próxima: ¡no usar plantilla!
 
 Por el contrario, lo que sí sirvió y mucho fue traerme componentes reutilizables desde [threadbare](https://github.com/endlessm/threadbare). Ya que trabajo haciendo ese juego y estoy muy familiarizado con su código. Por ejemplo:
-- El scene manager: cambiar de escena con transiciones, teleporters, spawn points (convertido a 3D)
+- El scene manager: cambiar de escena con transiciones, teleporters, spawn points. Que con un poco de trabajo logré convertir a 3D.
+- El area filler (también con un poco de laburo convertido a 3D). Sirve para vestir rápido un nivel con props, definiendo un área poligonal. Hay una escena `area_filler_test.tscn` para probar en el editor.
 - El game state basado en Resources. Para guardar los hechos que comenté arriba. Está re bueno poder cambiar el estado con el juego andando, mediante el Remote dock del editor.
-- El area filler que logré convertir a 3D. Sirve para vestir rápido un nivel con props, definiendo un área poligonal. Hay una escena `area_filler_test.tscn` para probar en el editor.
 
 Sirvieron bastante, al punto que mis compas las llamaron *"jam essentials"*. ¡Deberíamos convertirlas en addons de Godot!
 
@@ -59,28 +59,30 @@ Algo que hice pero al final no valió tanto la pena fue agregarle el joystick vi
 
 A mitad de la jam el otro programador hechó la de humo sin haber implementado nada. Una lástima porque había hecho un re buen trabajo dibujando diagramas en la preproducción. Me perdí ese intercambio y tuve que remarla. Me hubiera encantado ponerle más onda a las mecánicas de los minijuegos. Y a la jugabilidad en general, para que sea más que una excelente historia. ¡Pero hubo que cerrar para llegar a tiempo!
 
+A diferencia de otras jams más frenéticas en las que participé, el código quedó bastante bien. Hice una buena separación de los componentes y dejé propiedades exportadas para no tener que andar tocando los scripts. Quizá overkill para una jam, pero hasta me ayudó a mí mismo a no enredarme.
+
 ## integreishon y perres
 
 La colaboración en un proyecto de videojuego es un tema que me suele rondar la cabeza. ¿Cómo puede ser que la tecnología avance para tantos lados pero que la colaboración todavía no esté resuelta? Dependemos de git, que fue creado para código de programación. Un ejemplo sencillito: dos personas agregan un nodo distinto a una misma escena de Godot, cada una en su rama, y tratan de unir... ¡CONFLICTO!
 
 ```
 <<<<<<< HEAD
-[node name="CambioA" type="Node2D" parent="." unique_id=1659013573]
+[node name="NodoA" type="Node2D" parent="." unique_id=1659013573]
 =======
-[node name="CambioB" type="Node2D" parent="." unique_id=229542650]
+[node name="NodoB" type="Node2D" parent="." unique_id=229542650]
 >>>>>>> rama-b
 ```
 
 Y encima el conflicto no se puede resolver desde el editor, porque los separadores del conflicto (las líneas con `<<<<<<<`, `=======`, `>>>>>>>`) rompen el formato del archivo `.tscn`, el editor tira un "parse error", y la escena no se puede abrir:
 
 ```
-  ERROR: scene/resources/resource_format_text.cpp:293 - Parse Error: Parse error. [Resource file res://scenes/menus/splash/splash.tscn:101]
-  ERROR: Failed loading resource: res://scenes/menus/splash/splash.tscn.
+  ERROR: scene/resources/resource_format_text.cpp:293 - Parse Error: Parse error. [Resource file res://scenes/levels/level_1.tscn:101]
+  ERROR: Failed loading resource: res://scenes/levels/level_1.tscn.
 ```
 
 Así que hay que resolver el archivo roto en un programa externo (como emacs) haciéndole una cirugía al texto.
 
-Este problema está muy bien explicado en la charla [*beyond git: real-time version control for godot*](https://www.youtube.com/watch?v=CAJ_iIedx_I) que dio que hablar en la última godotcon (con un poco de hate para mi gusto, llevo toda una carrera basada en git, y aunque por supuesto reniego le debo un montón, como la gran cantidad de la industria del software). Y me da mucha ilusión la herramienta [backstitch](https://backstitch.dev/) (bancada por la fundación para la que trabajo) que se integra al editor. ¡Espero poder usar backstitch en la próxima jam!
+Este problema está muy bien explicado en la charla [*beyond git: real-time version control for godot*](https://www.youtube.com/watch?v=CAJ_iIedx_I) que dio que hablar en la última godotcon (con un poco de hate para mi gusto, llevo toda una carrera basada en git, y aunque por supuesto reniego le debo un montón, yo y la mayor parte de la industria del software). Y me da mucha ilusión la herramienta [backstitch](https://backstitch.dev/) (bancada por la fundación para la que trabajo) que se integra al editor. ¡Espero poder usar backstitch en la próxima jam!
 
 Volviendo a esta jam, ¿qué hicimos? Yo no quería que la integración quedara toda a cargo de Luis y de mí, así que agité para que usen github desktop quienes aun no lo hacían, y que abran pull requests (de ahora en más denominados "perres", y la acción de abrir uno: "perrear"). ¡Y se animaron! Además tomamos las típicas medidas preventivas: "ojo que voy a estar editando el nivel del salón". Es irónico hacer esto en git, que como es un control de versiones distribuído no tiene algo parecido al comando `svn lock` del viejo svn (que es centralizado). Aunque con git LFS (que se usa mucho en videojuegos) sí existe el comando `git lfs lock`.
 

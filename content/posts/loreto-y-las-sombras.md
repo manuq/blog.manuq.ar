@@ -15,13 +15,15 @@ Me interesaba en particular hacer algo sobre la figura de Macacha Güemes. Para 
 
 > Cecilia Verino — Holi. Ando dispo para hacer un proyecto para una jam. Soy historiadora, game designer y diseñadora de narrativa, por lo que necesitaría gente en programación, arte y audio. Si es un programador de Godot, mejor, porque estoy aprendiendo a prototipar en ese motor y me gustaría practicar con el mismo. Andaba con ganas de hacer un juego estilo sigilo y acción con Macacha Güemes y las espías salteñas. Si alguien está interesado en la idea, avisen porfa.
 
-"Sigilo y acción".. "Macacha Güemes y las espías salteñas".. "Godot".. ¡parecido a lo que yo andaba ideando! Y mi cagazo de no ser históricamente preciso ya no tendría lugar con una historiadora en el grupo. Cuando me aceptaron como integrante ya estaba bastante formado el grupo con una persona en programación, dos en audio, y otra en gráficos, además de ceci.
+"Sigilo y acción".. "Macacha Güemes y las espías salteñas".. "Godot".. ¡parecido a lo que yo andaba ideando! Y mi cagazo de no ser históricamente preciso ya no tendría lugar con una historiadora en el grupo. Cuando me aceptaron como integrante ya estaba bastante formado el grupo con una persona en programación, dos en audio, y otra en gráficos, además de Cecilia.
 
 ## la previa
 
 Hicimos reuniones virtuales. Armamos [un figma](https://www.figma.com/board/EtVtFaOGvAbACt525vlP8J/Juego-Macacha?node-id=0-1&t=i1vLnE94TM1vOLSi-1) (acá [en png](https://drive.google.com/file/d/132h7BggRbmW2Fs10BBo0Q2uSu-5StWeG/view?usp=sharing)). Me empecé a cebar. También cayó a mis manos (¡gracias Josefina!) un librito de divulgación cuyo título envejeció un poco mal: *Libertarias, mujeres que dejan huella. De Mariana Baizán*, que escaneé y [dejo acá para descargar](https://drive.google.com/file/d/1Uxg75PCW4csa5IoDrUyJe3g0gD4BTH-C/view?usp=sharing).
 
 De la previa me gustó que decidamos una estética tipo "Cult of the Lamb", un 2.5D digamos. Y que hayan minijuegos bien simples para cortar un poco la narrativa. También que la protagonista no sea Macacha sino otra de "las bomberas": María Loreto Sánchez Peón, la líder de las espías salteñas.
+
+Me veía fuera de mi zona de confort ya que acostumbro a usar godot en 2d, y este proyecto se encaminaba a ser 3d con sprites como billboards. ¡Interesante!
 
 ## desarrollo
 
@@ -51,22 +53,40 @@ Además de otras cosas que me fueron fácil de implementar porque ya las había 
 
 Un chiche que logré meter del que estoy particularmente orgulloso fue el [efectito este de rebote](https://macachajam.github.io/macacha-jam/#efecto_squash_stretch/efecto_squash_stretch_test) en los arbustos.
 
+Lo que más me divirtió hacer fue el minijuego de escuchar. Me hubiera gustado dedicarle el mismo tiempo a los otros dos. Y también me gustó hacer la parte de tensión, en que te persiguen los soldados (cuando perdés a un minijuego). Es una boludez, pero para mí hacer la navegación en 3d fue un desafío. Hacía rato que no me quedaba hasta la madrugada programando.
+
 Algo que hice pero al final no valió tanto la pena fue agregarle el joystick virtual para pantalla táctil que viene con Godot 4.7. Si prueban el build web en un celular van a ver que funciona, aunque está difícil usar el menú y otras partes de la interfaz a menos que te agarres el dedo índice con un sacapuntas. El tema es que por limitaciones técnicas (la niebla volumétrica no funca en web) decidimos publicar el juego como builds para Windows y Linux. Una pena porque sé que a la gente le da paja bajarse los juegos para probarlos.
 
 A mitad de la jam el otro programador hechó la de humo sin haber implementado nada. Una lástima porque había hecho un re buen trabajo dibujando diagramas en la preproducción. Me perdí ese intercambio y tuve que remarla. Me hubiera encantado ponerle más onda a las mecánicas de los minijuegos. Y a la jugabilidad en general, para que sea más que una excelente historia. ¡Pero hubo que cerrar para llegar a tiempo!
 
-## integreishon
+## integreishon y perres
 
-gran ventaja de que pudieron integrar ellos mismos las músicas
+La colaboración en un proyecto de videojuego es un tema que me suele rondar la cabeza. ¿Cómo puede ser que la tecnología avance para tantos lados pero que la colaboración todavía no esté resuelta? Dependemos de git, que fue creado para código de programación. Un ejemplo sencillito: dos personas agregan un nodo distinto a una misma escena de Godot, cada una en su rama, y tratan de unir... ¡CONFLICTO!
 
-la contra de que tuve que renegar un poco
+```
+<<<<<<< HEAD
+[node name="CambioA" type="Node2D" parent="." unique_id=1659013573]
+=======
+[node name="CambioB" type="Node2D" parent="." unique_id=229542650]
+>>>>>>> rama-b
+```
 
-perderle el miedo a git
+Y encima el conflicto no se puede resolver desde el editor, porque los separadores del conflicto (las líneas con `<<<<<<<`, `=======`, `>>>>>>>`) rompen el formato del archivo `.tscn`, el editor tira un "parse error", y la escena no se puede abrir:
 
-la colaboración en un proyecto de videojuego es un tema que me ronda la cabeza.
-¿cómo puede ser que la tecnología avance para tantos lados pero que la colaboración no esté resuelta?
+```
+  ERROR: scene/resources/resource_format_text.cpp:293 - Parse Error: Parse error. [Resource file res://scenes/menus/splash/splash.tscn:101]
+  ERROR: Failed loading resource: res://scenes/menus/splash/splash.tscn.
+```
 
-backstitch
+Así que hay que resolver el archivo roto en un programa externo (como emacs) haciéndole una cirugía al texto.
+
+Este problema está muy bien explicado en la charla [*beyond git: real-time version control for godot*](https://www.youtube.com/watch?v=CAJ_iIedx_I) que dio que hablar en la última godotcon (con un poco de hate para mi gusto, llevo toda una carrera basada en git, y aunque por supuesto reniego le debo un montón, como la gran cantidad de la industria del software). Y me da mucha ilusión la herramienta [backstitch](https://backstitch.dev/) (bancada por la fundación para la que trabajo) que se integra al editor. ¡Espero poder usar backstitch en la próxima jam!
+
+Volviendo a esta jam, ¿qué hicimos? Yo no quería que la integración quede toda a cargo de Luis y de mí, así que agité para que usen github desktop quienes aun no lo hacían, y que abran pull requests (de ahora en más denominados "perres", y la acción de abrir uno: "perrear"). ¡Y se animaron! Además tomamos las típicas medidas preventivas: "ojo que voy a estar editando el nivel del salón". Es irónico hacer esto en git, que como es un control de versiones distribuído no tiene algo parecido al comando `svn lock` del viejo svn (que es centralizado). Aunque con git LFS (que se usa mucho en videojuegos) sí existe el comando `git lfs lock`.
+
+En el caso de Cecilia, hizo cambios importantes en los diálogos y hasta destacó "perderle el miedo a git" como uno de sus logros en la jam. ¡Zarpado!
+
+En el caso de lxs chicxs de audio, también abrieron ramas y pudieron integrar ellxs mismxs las músicas. Yo les había pasado [esta charla de música interactiva en Godot](https://youtu.be/dPXapfE7aHQ), y estaba por copiar el Background Music autoload desde Threadbare, que es open source y puede hacer el sonido por capas que querían. Un ejemplo se puede escuchar [en este video](https://youtu.be/q-R28y3bWa8?t=1707), las capas se van sumando a medida que se resuelve el puzzle. Pero me ganaron de mano haciendo un audio/music manager con asistencia de un llm, con gran ventaja de que me liberaron de hacer ese trabajo! La contra es que tuve que renegar un poco con el código generado por el llm. Pero igual, ¡felicitaciones! Tuvimos solo dos conflictos y los resolví de taquito.
 
 ## adorni fin
 
@@ -78,6 +98,4 @@ Aprendí una banda y encima quedó muy lindo el resultado. Me terminé involucra
 
 A mis compas de grupo: me encantó conocerles y compartir esta experiencia con ustedes, cada unx aportando desde su lugar único.
 
-A las organizaciones que hicieron posible la jam: ¡mil gracias y sigan haciendo! acción dev, women in games ar, sheroes in games.
-
----
+A las organizaciones que hicieron posible la jam: ¡mil gracias y sigan haciendo! [acción dev](https://www.instagram.com/acciondev/), [women in games ar](https://www.womeningamesar.com/), [sheroes in games](https://sheroesingames.unq.edu.ar/).

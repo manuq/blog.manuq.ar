@@ -14,7 +14,7 @@ Pero juego al truco bastante seguido con amigos. Y desde hace rato que me vengo 
 
 Preguntas que me están llevando, sin querer, a meterme en el mundo del diseño de juegos. Soy amateur para muchas cosas, pero en *game design* soy muuy amateur. ¿Qué puede malir sal? ¿Qué puedo saber eu de esta situação? Quiero probar con un prototipo, y probablemente fracase.
 
-### Examen de historia
+### examen de historia
 
 Ojo que no es que no haya videojuegos que llevan al juego de mesa a la pantalla de la PC o del celu, ¡todo lo contrario! La historia de los videojuegos en Argentina no se puede contar sin cantar "¡truco!". Los más destacados:
 
@@ -30,7 +30,7 @@ Ojo que no es que no haya videojuegos que llevan al juego de mesa a la pantalla 
 
 Si me estoy olvidando de alguno importante, <a href="mailto:manuel.por.aca@gmail.com?subject=sobre%20videojuegos%20y%20truco">me avisan.</a>
 
-### Ronda VS pantalla
+### ronda VS pantalla
 
 <picture>
   <!-- User prefers light mode: -->
@@ -51,7 +51,7 @@ Y también, me interesa trasladar solamente lo que se puede. En particular, las 
 
 Incluso en la interfaz. La pantalla es rectangular así que no tiene sentido poner las cartas en círculo o bazas. Es mejor ponerlas en filas y columnas (Marvel Snap lo hace bien). Algunos videojuegos de truco hacen un punto medio bastante forzado: ponen las cartas en ronda, pero derechas a la cámara. Las cartas originales están diseñadas para jugarse en bazas, para ser leídas desde cualquier lado de la mesa. En un videojuego se puede cambiar el diseño totalmente. Incluso no tienen porqué ser cartas.
 
-### Un truco más accesible
+### un truco más accesible
 
 Tengo la intuición de que el truco tiene algo para darle a los videojuegos. Y quero probarla, por eso el prototipo. Conozco varios juegos de mesa modernos, tipo eurojuegos. Hay varios en casa, y aún así el truco sigue siendo uno de mis predilectos para jugar con amigxs. Hay algo ahí.
 

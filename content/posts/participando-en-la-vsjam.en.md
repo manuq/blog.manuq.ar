@@ -8,7 +8,7 @@ summary = 'two crazy weeks making a game for a very peculiar console'
 
 [This was my submission](https://github.com/ventilastation/vsdk/pull/81) for ventilastation jam! (video included). The game I was able do in the short time I had to dedicate to it, in a pair of weeks. I had a blast. It helped a lot that it rained during the weekend and I couldn't go sailing. I proceed to tell a bit...
 
-## Three pycamps
+## three pycamps
 
 ...summarize my story with [ventilastation](https://ventilastation.protocultura.net/en/):
 
@@ -22,7 +22,7 @@ summary = 'two crazy weeks making a game for a very peculiar console'
 
 The ventilastation is a spectacular project for several reasons: the free hardware and software, the fact that it can be programmed in (micro)python, that the microchip is spinning at full speed along with the leds, and the hacker/punk/rebellious aesthetic of the games.
 
-## The jam
+## the jam
 
 I found out about the online jam a week late, but I decided to join anyway. It had been [aages](https://github.com/manuq/aereo.manuq.ar) since I'd participated in a jam! We worked exclusively in the emulator, sharing our progress on the event's Discord server. And in three sessions, on Thursdays (two for me), alecu showed us how what we had pushed looked on the real hardware, streaming the camera on Discord and pointing it squarely at the fan. He figured out how to synchronize both speeds (the camera and the fan) to make it look pretty faithful.
 
@@ -35,7 +35,7 @@ My idea was to continue the "a jugar con vugo" project. From that experience, I 
 
 But I got bogged down in this and wasted a lot of time, especially with workarounds that seemed to look good in the emulator but proved not to be the case on the real hardware. My [first pull request](https://github.com/ventilastation/vsdk/pull/54) (includes video) was a demo of a tunnel that goes back and forth, nothing more.
 
-## Tincho vrunner
+## tincho vrunner
 
 Just recently, Nico, a journalist friend who works at the local newspaper, published [a chronicle](https://www.ellitoral.com/area-metropolitana/video-viral-tincho-carpincho-jorge-alvarez-martin-familia-periodista-personaje-realizador-canal13-santafe-islas-capibara-muneco-mascota-abuelo-lobato_0_bJrUxksHhR.html) about a character from our pop culture. And it occurred to me to [include him as a character in the game](https://github.com/ventilastation/vsdk/pull/56). This also gave me the motivation to continue the game jam, add gameplay, and turn the demo into a real game: tincho carpincho's game. Having a theme or something to inspire you is great. You can read more about Tincho in the [README](https://github.com/ventilastation/vsdk/tree/main/apps/micropython/apps/tincho_vrunner#tincho-vrunner) (in Spanish).
 
@@ -79,7 +79,7 @@ Finally, I iterated on the design of the two levels and tweaked the mechanics a 
 
 I loved seeing the process of the other games in the jam, and although there wasn't much interaction between us, the set of games turned out great!
 
-## Post jam?
+## post jam?
 
 These are things I left out, what I'd like to do if I were to resume development of the game:
 

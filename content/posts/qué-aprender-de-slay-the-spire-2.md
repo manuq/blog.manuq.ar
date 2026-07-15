@@ -16,7 +16,7 @@ Así que lo compré hace unas semanas. Todavía está en *early access*, y ya la
 
 Como gamedev amateur que soy, que se pueda inspeccionar un proyecto tan bestseller y popular me parece impresionante.
 
-## Decompilando
+## decompilando
 
 La decompilación no se hizo esperar. Ocurrió al publicarse, antes de que tocara el suelo. ¡Horror! Excepto que la gente de Mega Crit es buena onda. Uno de ellos, Jake, [dijo](https://www.reddit.com/r/godot/comments/1rm7ueb/comment/o8zqpit/):
 
@@ -28,7 +28,7 @@ Como tengo una copia legal y el visto bueno de los creadores, posteé en Godot M
 
 Salvedad: el juego decompilado así no corre. Por un lado, porque lo hicieron con una versión custom de Godot, adaptada a sus necesidades. Y por otro porque el *core* del juego, toda la lógica, vive en una lib propia. Se puede usar otra herramienta para decompilar esta lib en código fuente legible de C#, pero realmente no es la parte que más me interesa.
 
-## ¿Y qué aprender?
+## ¿y qué aprender?
 
 Lo primero que hice fue abrir algunas escenas con personajes y ver las animaciones. ¡Qué maravilla! Están hechas en Spine que es una herramienta aparte, no son las animaciones esqueletales de Godot. Pero se las puede reproducir desde el editor tranquilamente.
 
@@ -42,7 +42,7 @@ Lo que más me sirvió inspeccionar hasta ahora: ¡los efectos de partículas y 
 
 Fui compartiendo todo esto en Godot Meetup Argentina. Es el grupo de Whatsapp más grande en el que estoy. Ahí pasa de todo: gente comparte el progreso de sus juegos, se organizan eventos, se resuelven dudas, etc. La vez pasada, a uno se le ocurrió agregar la sintaxis que tienen los shaders de recombinar las componentes de un vector de forma fácil en un script, lo que en la jerga se conoce como [swizzling](https://en.wikipedia.org/wiki/Swizzling_(computer_graphics)). Y mandó [un pull request](https://github.com/godotengine/godot/pull/118223) para arriba. Veremos.
 
-## Conclusión
+## conclusión
 
 Creo que por esto mismo de tener todo el core en una lib propia, y las animaciones todas en Spine, es que pudieron transicionar de Unity a Godot relativamente fácil.
 

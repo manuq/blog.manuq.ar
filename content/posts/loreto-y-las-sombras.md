@@ -46,8 +46,9 @@ Por el contrario, lo que sí sirvió y mucho fue traerme componentes reutilizabl
 - El scene manager: cambiar de escena con transiciones, teleporters, spawn points. Que con un poco de trabajo logré convertir a 3D.
 - El area filler (también con un poco de laburo convertido a 3D). Sirve para vestir rápido un nivel con props, definiendo un área poligonal. Hay una escena `area_filler_test.tscn` para probar en el editor.
 - El game state basado en Resources. Para guardar los hechos que comenté arriba. Está re bueno poder cambiar el estado con el juego andando, mediante el Remote dock del editor.
+- La integración continua que [amalgama múltiples páginas web](https://github.com/endlessm/amalgamate-pages), cada una con un build del juego, uno por pull request o "perre" abierto, además de la rama principal.
 
-Sirvieron bastante, al punto que mis compas las llamaron *"jam essentials"*. ¡Deberíamos convertirlas en addons de Godot!
+Sirvieron bastante, al punto que mis compas las llamaron *"jam essentials"*. ¡Deberíamos convertirlas en addons de Godot! Tengo que darle las gracias a mi compa de trabajo [Will](https://willthompson.co.uk/) porque gran parte de estos componentes son de su autoría.
 
 Además de otras cosas que me fueron fácil de implementar porque ya las había hecho en threadbare como interactuar con NPCs, iniciar un diálogo al interactuar, el uso del addon Dialogue Manager.
 

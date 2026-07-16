@@ -8,6 +8,7 @@
     --link-color: #93e;
     --selection-background-color: #b5f;
     --selection-color: #fff;
+    --pre-border-image: url(/images/9-slice-light.png);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -19,6 +20,7 @@
         --link-color: #b5f;
         --selection-background-color: #93e;
         --selection-color: #000;
+        --pre-border-image: url(/images/9-slice-dark.png);
     }
 }
 
@@ -122,8 +124,11 @@ footer p a {
 
 pre {
     overflow-x: auto;
-    background-color: var(--bg-pre);
-    padding: 1rem 0.3rem;
+    border-image-source: var(--pre-border-image);
+    border-image-slice: 30 fill;
+    border-image-width: 30px;
+    border-image-repeat: repeat;
+    padding: 22px 6px;
 }
 
 code {

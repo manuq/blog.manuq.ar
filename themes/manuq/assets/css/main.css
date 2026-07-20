@@ -64,6 +64,7 @@ body {
     padding-left: 1rem;
     padding-right: 1rem;
     max-width: 768px;
+    overflow-y: scroll;
 }
 
 a {

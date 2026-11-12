@@ -1,0 +1,30 @@
+{{/*
+  Create the English page of each post that only has a Spanish version, so it
+  shows in the English site with a link to the Spanish one. A post has an
+  English version when its .en.md file exists next to the Spanish .md file.
+*/}}
+{{ $directory := "content/posts" }}
+{{ range os.ReadDir $directory }}
+  {{ $name := .Name }}
+  {{ if and (strings.HasSuffix $name ".md") (not (strings.HasSuffix $name ".en.md")) }}
+    {{ $slug := strings.TrimSuffix ".md" $name }}
+    {{ if not (fileExists (printf "%s/%s.en.md" $directory $slug)) }}
+      {{/* The front matter is the TOML between the first two +++ lines. */}}
+      {{ $source := os.ReadFile (printf "%s/%s" $directory $name) }}
+      {{ $front := transform.Unmarshal (dict "format" "toml") (index (split $source "+++") 1) }}
+      {{ if not $front.draft }}
+        {{ $link := printf `{{< relref path="/posts/%s" lang="es" >}}` $slug }}
+        {{ $.AddPage (dict
+          "path" $slug
+          "title" $front.title
+          "dates" (dict "date" (time.AsTime $front.date))
+          "params" (dict "tags" ($front.tags | default slice))
+          "summary" "this post is available only in Spanish, sorry!"
+          "sitemap" (dict "priority" -1)
+          "content" (dict "mediaType" "text/markdown" "value" (printf "This post is available only [in Spanish](%s), sorry!" $link))
+          "sites" (dict "matrix" (dict "languages" (slice "en")))
+        ) }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+{{ end }}

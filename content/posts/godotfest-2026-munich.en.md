@@ -26,10 +26,8 @@ The one about [incrementally porting GDScript to C++](https://youtu.be/kPQZ9af-e
 
 The one about [making a flamethrower SFX from a bathroom sink](https://godotfest.com/talks/synthesizing-a-flamethrower-from-a/) was a lot of fun.
 
-I Don't Know If This Game Is Good. Very cool talk on planning, and this speaker has shipped successful commercial games.
+There was also a basic one about [image composition](https://youtu.be/e5JcSxDBop8). I knew many things already, but they were very well presented. It made me open [this task](https://github.com/endlessm/threadbare/issues/3070) for the cinematics.
 
-The basics of Image Composition. Lot of this I already knew from my filmmaking background, but was very nicely presented. It made me open this task for Threadbare cinematics.
-
-The Price of Rushing Preproduction - Vultures: A "Turn-Based Resident Evil" Postmortem: they entered production with a fun core loop, but without having developed the full game loop & progression. This came back to bite them. They tried to outsource/delegate level design, and it didn't work out for various reasons, including that they did not properly communicate the full vision for the game to the outsourced level designer. It strikes me that the Threadbare team will have to work hard to avoid this same trap if the community is to build core game quests.
+There were at least three talks on production / planning and I liked them all. One [dedicated to game jams](https://www.youtube.com/watch?v=8mLDjptfA_s), another about [validating if your game is good](https://youtu.be/2N4l1qCWqU8). And personally the one I liked the most was the one from Giovanni, it seemed honest to me, and the title resonated from somewhere: [The Price of Rushing Preproduction](https://youtu.be/aAK1v01pJfc). I'm looking forward for this game, is a turn-based Residen Evil with PS1 aesthetics.
 
 Same [as for gamescom]({{< relref "posts/juegos-de-gamescom-2026.en.md" >}}), thanks Endless Access for sending me to the event!

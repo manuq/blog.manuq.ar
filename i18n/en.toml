@@ -1,4 +1,4 @@
-published = 'published'
+published_on = 'Published on {{ .date }}'
 tag = 'tag'
 tags = 'tags'
 recent_content_on = 'recent content on'

@@ -8,10 +8,8 @@
   <div class="pie-del-contenido">
   {{ $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" }}
   {{ $dateHuman := .Date | time.Format ":date_long" }}
-  <div class="pie-row">
-    <span class="pie-label">{{ i18n "published" }}</span>
-    <time class="pie-value" datetime="{{ $dateMachine }}">{{ $dateHuman }}</time>
-  </div>
+  {{ $time := printf `<time datetime="%s">%s</time>` $dateMachine $dateHuman }}
+  <div>{{ i18n "published_on" (dict "date" $time) | safeHTML }}</div>
 
 {{/* comento los tags hasta que haya algo de contenido
 
